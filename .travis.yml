@@ -1,0 +1,10 @@
+language: generic
+sudo: required
+services:
+    - docker
+
+before-install:
+    - docker build -t vishalkini/my-repo -f Dockerfile.dev .
+
+script:    
+    - docker run -e CI=true vishalkini/my-repo npm run test    
