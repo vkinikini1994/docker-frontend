@@ -9,6 +9,7 @@ before-install:
 script:    
     - docker run -e CI=true vishalkini/my-repo npm run test    
     
+
 deploy:
     provider: elasticbeanstalk
     region: "us-east-1"   
